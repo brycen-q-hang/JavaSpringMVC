@@ -23,8 +23,8 @@ public class UserController {
     private final PasswordEncoder passwordEncoder;
 
     public UserController(
-            UserService userService,
             UploadService uploadService,
+            UserService userService,
             PasswordEncoder passwordEncoder) {
         this.userService = userService;
         this.uploadService = uploadService;
@@ -68,21 +68,25 @@ public class UserController {
             BindingResult newUserBindingResult,
             @RequestParam("hoidanitFile") MultipartFile file) {
 
-        List<FieldError> errors = newUserBindingResult.getFieldErrors();
-        for (FieldError error : errors) {
-            System.out.println(">>>" + error.getField() + " - " + error.getDefaultMessage());
-        }
+        // List<FieldError> errors = newUserBindingResult.getFieldErrors();
+        // for (FieldError error : errors) {
+        // System.out.println(">>>>" + error.getField() + " - " +
+        // error.getDefaultMessage());
+        // }
 
         // validate
         if (newUserBindingResult.hasErrors()) {
             return "admin/user/create";
         }
 
+        //
         String avatar = this.uploadService.handleSaveUploadFile(file, "avatar");
         String hashPassword = this.passwordEncoder.encode(hoidanit.getPassword());
+
         hoidanit.setAvatar(avatar);
         hoidanit.setPassword(hashPassword);
         hoidanit.setRole(this.userService.getRoleByName(hoidanit.getRole().getName()));
+        // save
         this.userService.handleSaveUser(hoidanit);
         return "redirect:/admin/user";
     }
