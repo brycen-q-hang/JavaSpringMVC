@@ -74,17 +74,13 @@
                 <jsp:include page="../layout/banner.jsp" />
                 <!-- Hero End -->
 
-                <!-- Featurs Section Start -->
-                <jsp:include page="../layout/feature.jsp" />
-                <!-- Featurs Section End -->
-
                 <!-- Fruits Shop Start-->
                 <div class="container-fluid fruite py-5">
                     <div class="container py-5">
                         <div class="tab-class text-center">
                             <div class="row g-4">
                                 <div class="col-lg-4 text-start">
-                                    <h1>Our Organic Products</h1>
+                                    <h1>Sản phẩm nổi bật</h1>
                                 </div>
                                 <div class="col-lg-8 text-end">
                                     <ul class="nav nav-pills d-inline-flex text-center mb-5">
@@ -92,30 +88,6 @@
                                             <a class="d-flex m-2 py-2 bg-light rounded-pill active"
                                                 data-bs-toggle="pill" href="#tab-1">
                                                 <span class="text-dark" style="width: 130px;">All Products</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                                href="#tab-2">
-                                                <span class="text-dark" style="width: 130px;">Vegetables</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                                href="#tab-3">
-                                                <span class="text-dark" style="width: 130px;">Fruits</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                                href="#tab-4">
-                                                <span class="text-dark" style="width: 130px;">Bread</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                                href="#tab-5">
-                                                <span class="text-dark" style="width: 130px;">Meat</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -169,20 +141,16 @@
                 </div>
                 <!-- Fruits Shop End-->
 
+
+                <!-- Featurs Section Start -->
+                <jsp:include page="../layout/feature.jsp" />
+                <!-- Featurs Section End -->
+
                 <jsp:include page="../layout/footer.jsp" />
-
-
-
-
-
-
-
-
 
                 <!-- Back to Top -->
                 <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i
                         class="fa fa-arrow-up"></i></a>
-
 
                 <!-- JavaScript Libraries -->
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
